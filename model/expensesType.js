@@ -1,11 +1,14 @@
 const mongoose = require('mongoose');
 const expensesTypeSchema = new mongoose.Schema({
-    organization_Id: {
-      type: String
-    },
-    expenses_Type: {
+    // organization_Id: {
+    //   type: String
+    // },
+    type: {
       type: String,
     },
+    id:{
+      type:String
+    }
   });
   
-module.exports = User = mongoose.model("ExpensesType", expensesTypeSchema);
+module.exports = ExpensesType = mongoose.model("ExpensesType", expensesTypeSchema);

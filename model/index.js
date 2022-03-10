@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const expensesSchema = new mongoose.Schema({
-    organization_Id: {
-      type: String
+    organization_id: {
+      type: Number,
     },
     date: {
       type: String
@@ -13,7 +13,7 @@ const expensesSchema = new mongoose.Schema({
       type: String,
     },
     amount: {
-      type: String
+      type: Number,
     },
     receipt:{
     type:String
@@ -23,4 +23,4 @@ const expensesSchema = new mongoose.Schema({
     }
   });
   
-module.exports = User = mongoose.model("Expenses", expensesSchema);
+module.exports = Expenses = mongoose.model("Expenses", expensesSchema);

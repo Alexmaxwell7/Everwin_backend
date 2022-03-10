@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 // const cors = require('cors');
 const app= express();
-const url = 'mongodb://localhost/Expenses'
+const url = 'mongodb://localhost/Everwin'
 // app.use(cors())
 
 mongoose.connect(url,{useNewUrlParser:true})
@@ -21,3 +21,4 @@ app.listen(5000,()=>{
 })
 
 module.exports = app;
+
