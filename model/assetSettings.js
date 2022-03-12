@@ -3,9 +3,7 @@ const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 
 const assetSettingSchema = new Schema({
-    organization_id: {
-        type: Number,
-      },
+     id:String,
      categories:String,
      items:String
 }, {
