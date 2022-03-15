@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 // const cors = require('cors');
 const app= express();
 const url = 'mongodb://localhost/Everwin'
-// app.use(cors())
+const cors = require("cors");
+app.use(cors())
 
 mongoose.connect(url,{useNewUrlParser:true})
 const con = mongoose.connection
@@ -19,6 +20,7 @@ app.use('/',require('./routes/index'));
 app.listen(5000,()=>{
     console.log("server Started")
 })
+
 
 module.exports = app;
 

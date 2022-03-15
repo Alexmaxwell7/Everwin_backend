@@ -2,7 +2,7 @@ const express = require('express');
 
 const ExpensesController = require('../controller/index');
 const AssetAllocationController = require('../controller/assetAllocationController');
-
+const EmployeeController=require('../controller/employeeController');
 const router = express.Router()
 
 
@@ -25,6 +25,11 @@ router.delete('/deleteAsset_Allocation/:id',AssetAllocationController.deleteAsse
 router.get('/getAsset_Settings',AssetAllocationController.getAsset_Settings);
 router.post('/createAsset_Settings',AssetAllocationController.createAsset_Settings);
 router.delete('/deleteAsset_Settings/:id',AssetAllocationController.deleteAsset_Settings);
+//employee router
+router.get('/getemployee',EmployeeController.getEmployee);
+router.get('/getemployee/:id',EmployeeController.getEmployeeById);
+router.post('/createemployee',EmployeeController.createEmployee);
+router.delete('/deleteemployee/:id',EmployeeController.deleteEmployee);
 
 
 module.exports=router
